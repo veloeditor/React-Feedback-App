@@ -8,12 +8,12 @@ export const FeedbackProvider = ({ children }) => {
     {
       id: 1,
       rating: 10,
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.',
+      text: 'This was an amazing experience. 10/10.',
     },
     {
       id: 2,
       rating: 9,
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.',
+      text: 'Almost perfection. The food was a tad on the cool side unfortunately but still very tasty',
     },
     {
       id: 3,
@@ -21,6 +21,11 @@ export const FeedbackProvider = ({ children }) => {
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.',
     },
   ]);
+
+  const [feedbackEdit, setFeedbackEdit] = useState({
+    item: {},
+    edit: false,
+  });
 
   const addFeedback = (newFeedback) => {
     newFeedback.id = uuidv4();
@@ -33,12 +38,21 @@ export const FeedbackProvider = ({ children }) => {
     }
   };
 
+  const editFeedback = (item) => {
+    setFeedbackEdit({
+      item,
+      edit: true,
+    });
+  };
+
   return (
     <FeedbackContext.Provider
       value={{
         feedback,
         deleteFeedback,
         addFeedback,
+        editFeedback,
+        feedbackEdit,
       }}>
       {children}
     </FeedbackContext.Provider>

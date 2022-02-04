@@ -7,7 +7,7 @@ const FeedbackData = [
   {
     id: 2,
     rating: 9,
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.',
+    text: 'This is the second comment.',
   },
   {
     id: 3,
