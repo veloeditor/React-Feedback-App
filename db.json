@@ -1,0 +1,19 @@
+{
+  "feedback": [
+    {
+      "id": 1,
+      "rating": 10,
+      "text": "This was amazing! A perfect 10"
+    },
+    {
+      "id": 2,
+      "rating": 7,
+      "text": "Much better than average."
+    },
+    {
+      "id": 3,
+      "rating": 4,
+      "text": "Barely average. Should have been better"
+    }
+  ]
+}
